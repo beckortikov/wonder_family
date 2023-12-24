@@ -1,0 +1,8 @@
+div[data-testid="stMetricValue"] > div  {
+    background-color: #EEEEEE;
+    border: 2px solid #CCCCCC;
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+ }
