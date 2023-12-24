@@ -259,7 +259,7 @@ def render_tab2():
 
     col1, col2 = st.columns(2)
     col1.metric("Средний процент совпадения по выруче", f'{product_metric:.2f}')
-    col1.metric("Средний процент совпадения по выруче", f'{product_metric_unique:.2f}')
+    col2.metric("Средний процент совпадения по выруче", f'{product_metric_unique:.2f}')
 
 if __name__ == "__main__":
     main()
