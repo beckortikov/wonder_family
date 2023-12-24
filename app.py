@@ -252,13 +252,14 @@ def render_tab2():
     # Применение функции к DataFrame
     za['match_percentage'] = za.apply(lambda row: calculate_match_percentage(row['difference'], row['total_revenue_y']), axis=1)
 
-    product_metric = za['match_percentage'].sum()/80
+    product_metric = za['match_percentage'].sum()/51
+    product_metric_unique = za['match_percentage'].sum()/16
     with open('style.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     col1.metric("Средний процент совпадения по выруче", f'{product_metric:.2f}')
-
+    col1.metric("Средний процент совпадения по выруче", f'{product_metric_unique:.2f}')
 
 if __name__ == "__main__":
     main()
